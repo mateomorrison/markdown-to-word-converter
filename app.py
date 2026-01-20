@@ -3,15 +3,6 @@ from pathlib import Path
 import pypandoc
 
 def convert_files():
-    # Ensure pandoc is installed
-    try:
-        # This downloads pandoc if not found on the system
-        pypandoc.ensure_pandoc_installed()
-    except OSError:
-        print("Could not find or install pandoc automatically.")
-        print("Please install it manually or check your internet connection.")
-        return
-
     # Define directories
     input_dir = Path("input")
     output_dir = Path("output")
